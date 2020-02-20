@@ -35,7 +35,7 @@ module.exports = {
     new browserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      proxy: 'http://fecundawordpresslocal.local/'
+      proxy: 'http://localhost/'
     })
   ]
 };
