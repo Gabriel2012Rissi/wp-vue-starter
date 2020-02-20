@@ -6,10 +6,12 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/dist/bootstrap.css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/dist/bootstrap-grid.css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/dist/bootstrap-reboot.css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/dist/main.css" />
+        
+        <!-- Remote Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap-reboot.min.css" />
+        
         <?php wp_head(); ?>	
     </head>
     <body>
@@ -22,7 +24,8 @@
           v-bind:pagers="pagers">
         </router-view>
     </transition>
-    </div><!--app-->
+    </div>
+    <!--app-->
     <?php get_template_part('/templates/home'); ?>
     <?php get_template_part('/templates/archive'); ?>
     <?php get_template_part('/templates/search'); ?>
@@ -37,10 +40,15 @@
     <?php get_template_part('/templates/_comments'); ?>
     <?php get_template_part('/templates/_comment-form'); ?>
     <?php get_template_part('/templates/_nopost'); ?>
+    
+    <!-- Remote Scripts -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>        
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>    
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+    
+    <!-- Bundle Script -->
+    <script src="<?php echo get_template_directory_uri(); ?>/dist/all.bundle.js"></script>
+    
     <?php wp_footer(); ?>
     </body>
 </html>
